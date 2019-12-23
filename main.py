@@ -28,6 +28,6 @@ if (__name__ == "__main__"):
     scheduler = APScheduler()
     scheduler.add_job(func=broadcast_time, args=['job run'], trigger='interval', id='job', seconds=5)
     scheduler.start()
-    app.run(port = 5000)
+    socketio.run(app)
 
 
